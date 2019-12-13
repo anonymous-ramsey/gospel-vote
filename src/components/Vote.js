@@ -44,7 +44,7 @@ export default class Vote extends Component {
   testMethod = (e) =>{
     e.preventDefault();
     const number = this.state.voters.contact
-    axios.get(`/search-vote?contact=${number}`)
+    axios.get(`https://gospel-awards-vote.herokuapp.com/search-vote?contact=${number}`)
       .then(response => {
         if(response.data.length > 0){
           this.showVoted();
@@ -106,7 +106,7 @@ export default class Vote extends Component {
         if (mob.length === 9){
           if (mob.startsWith('075') || mob.startsWith('076') || mob.startsWith('078') || mob.startsWith('079') || mob.startsWith('077') || mob.startsWith('080') || mob.startsWith('088') || mob.startsWith('099') || mob.startsWith('030') || mob.startsWith('033') || mob.startsWith('025') || mob.startsWith('031') || mob.startsWith('034')){
               const { voters } = this.state;
-              fetch(`/add-voter?f_name=${voters.fName}&m_name=${voters.mName}&l_name=${voters.lName}&contact=${voters.contact}`)
+              fetch(`https://gospel-awards-vote.herokuapp.com/add-voter?f_name=${voters.fName}&m_name=${voters.mName}&l_name=${voters.lName}&contact=${voters.contact}`)
                 .catch(err => console.log(err));
               this.showVerify();
           }
@@ -127,7 +127,7 @@ export default class Vote extends Component {
     e.preventDefault();
     e.persist();
     const { voters } = this.state;
-    axios.get(`/check-voter?contact=${voters.contact}`)
+    axios.get(`https://gospel-awards-vote.herokuapp.com/check-voter?contact=${voters.contact}`)
         .then(response => {
           if(response.data.length > 0){
             this.showMember();
@@ -141,19 +141,19 @@ export default class Vote extends Component {
 
   voteContestant_1 = _ => {
     const { contestant, voters } = this.state;
-    fetch(`/voters/vote?constantID=${contestant.contestant1}&voterContact=${voters.contact}`)
+    fetch(`https://gospel-awards-vote.herokuapp.com/voters/vote?constantID=${contestant.contestant1}&voterContact=${voters.contact}`)
         .catch(err => console.log(err));
     this.showSuccessful()
   };
   voteContestant_2 = _ => {
     const { contestant, voters } = this.state;
-    fetch(`/voters/vote?constantID=${contestant.contestant2}&voterContact=${voters.contact}`)
+    fetch(`https://gospel-awards-vote.herokuapp.com/voters/vote?constantID=${contestant.contestant2}&voterContact=${voters.contact}`)
         .catch(err => console.log(err));
     this.showSuccessful()
   };
   voteContestant_3 = _ => {
     const { contestant, voters } = this.state;
-    fetch(`/voters/vote?constantID=${contestant.contestant3}&voterContact=${voters.contact}`)
+    fetch(`https://gospel-awards-vote.herokuapp.com/voters/vote?constantID=${contestant.contestant3}&voterContact=${voters.contact}`)
         .catch(err => console.log(err));
     this.showSuccessful()
   };
