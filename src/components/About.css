@@ -1,0 +1,18 @@
+.header-image {
+  width: 100%;
+  margin-top: -2em;
+  margin-bottom: 2em;
+}
+
+.about-profile-pic {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+.length {
+  width: 100%;
+}
+@media (min-width: 750px){
+  .header-image {
+    display: none;
+  }
+}
