@@ -16,6 +16,7 @@ class Closed extends Component {
                             <h1 className="display-4 text-center">OOPS!!!, 402 ERROR!</h1>
                             <p>Your access to the page has been blocked by the owners</p>
                             <h1 className="display-4 text-center">Sorry for the inconvenience caused</h1>
+                            <h3 className="display-4 text-center" style={{color: "blue"}}>Voting Closed</h3>
                         </div>
                     </div>
                     <hr className={"length"}/>
