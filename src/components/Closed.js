@@ -7,7 +7,7 @@ class Closed extends Component {
         return (
             <Grid>
                 <Jumbotron>
-                    <h2>Result of the <span style={{color: 'lightGray'}}>Gospel</span> Awards <span style={{color: 'orange'}}>2019</span></h2>
+                    <h2>Hi Dear, Welcome to <span style={{color: 'lightGray'}}>Gospel</span> Awards <span style={{color: 'orange'}}>2019</span></h2>
                     <p>Brought to you by Advocacy 4 Children's Education</p>
                 </Jumbotron>
                 <Col xs={12} sm={8} smOffset={2}>
