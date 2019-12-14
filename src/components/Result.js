@@ -9,7 +9,7 @@ class Result extends Component {
         this.state = {
             AllVote: []
         };
-        fetch('https://gospel-awards-vote.herokuapp.com/vote-totals')
+        fetch('https://gospel-awar.herokuapp.com/vote-totals')
             .then(response => response.json())
             .then(response => this.setState({AllVote: response.data}))
             .catch(err => console.error(err));
