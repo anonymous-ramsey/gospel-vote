@@ -5,6 +5,7 @@ import Home from './components/Home';
 import Vote from './components/Vote';
 //import News from './components/News';
 import Result from "./components/Result";
+import Closed from "./components/Closed";
 import Navbar from './components/CustomNavbar';
 
 class App extends Component {
@@ -17,6 +18,7 @@ class App extends Component {
           </div>
           <Route exact path="/" component={Home} />
           <Route path="/vote" component={Vote} />
+          {/*<Route path="/vote" component={Closed} />*/}
           {/*<Route path="/news" component={News} />*/}
           <Route path="/result" component={Result} />
         </div>
