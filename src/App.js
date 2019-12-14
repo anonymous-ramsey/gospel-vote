@@ -3,7 +3,6 @@ import './App.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Vote from './components/Vote';
-//import News from './components/News';
 import Result from "./components/Result";
 import Closed from "./components/Closed";
 import Navbar from './components/CustomNavbar';
