@@ -106,9 +106,9 @@ export default class Vote extends Component {
         if (mob.length === 9){
           if (mob.startsWith('075') || mob.startsWith('076') || mob.startsWith('078') || mob.startsWith('079') || mob.startsWith('077') || mob.startsWith('080') || mob.startsWith('088') || mob.startsWith('099') || mob.startsWith('030') || mob.startsWith('033') || mob.startsWith('025') || mob.startsWith('031') || mob.startsWith('034')){
               const { voters } = this.state;
-              fetch(`https://gospel-awards-vote.herokuapp.com/add-voter?f_name=${voters.fName}&m_name=${voters.mName}&l_name=${voters.lName}&contact=${voters.contact}`)
+              //fetch(`https://gospel-awards-vote.herokuapp.com/add-voter?f_name=${voters.fName}&m_name=${voters.mName}&l_name=${voters.lName}&contact=${voters.contact}`)
                 .catch(err => console.log(err));
-              this.showVerify();
+              //this.showVerify();
           }
           else {
             alert('only sierra leone numbers are allowed, number should start with \n e.g 076, 088, 031, 025 should not start with \n e.g +232');
